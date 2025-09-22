@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestine: A Dynamic Web Experience</title>
+    
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    
+    <!-- Custom fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Exploring Palestine</h1>
+        <p>A journey through history and culture, brought to life with code.</p>
+    </header>
+
+    <main class="container">
+        <!-- Part 1: CSS3 Transitions and Animations -->
+        <section class="section">
+            <h2>Part 1: CSS Animations</h2>
+            <p>This animated box represents a pulsing heartbeat, symbolizing resilience and life. It's built with a continuous CSS keyframe animation.</p>
+            <div class="heartbeat-box"></div>
+            <p>Hover over the button below to see a smooth CSS transition effect.</p>
+            <button class="transition-btn">Discover More</button>
+        </section>
+
+        <!-- Part 2: JavaScript Functions -->
+        <hr>
+        <section class="section">
+            <h2>Part 2: JavaScript Functions</h2>
+            <p>Use the calculator below to find the area of a rectangular object, like a piece of Palestinian tile art. This uses a JavaScript function with parameters and a return value.</p>
+            <div class="form-group">
+                <input type="number" id="length-input" placeholder="Length (cm)">
+                <input type="number" id="width-input" placeholder="Width (cm)">
+                <button id="calculate-btn">Calculate Area</button>
+            </div>
+            <p id="result-display" class="result-text"></p>
+        </section>
+
+        <!-- Part 3: Combining CSS and JavaScript -->
+        <hr>
+        <section class="section">
+            <h2>Part 3: CSS & JS Integration</h2>
+            <p>Click the button below to dynamically trigger an animation on the card, revealing a quote about Palestinian heritage.</p>
+            <div class="card-container">
+                <div id="quote-card" class="card">
+                    <p class="initial-text">Click to reveal a quote</p>
+                    <p class="hidden-text">"We have a lot of heart, and we have a lot of hope. And with that, we have everything."</p>
+                </div>
+                <button id="trigger-btn">Reveal Quote</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Palestine Project</p>
+    </footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

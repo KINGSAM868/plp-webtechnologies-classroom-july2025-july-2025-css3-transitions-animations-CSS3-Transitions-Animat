@@ -1,0 +1,168 @@
+/* A modern, earthy color palette inspired by Palestine */
+:root {
+    --primary-color: #004d40; /* Dark green */
+    --secondary-color: #bf360c; /* Burnt orange */
+    --text-color: #2b2d42;
+    --bg-color: #f8f9fa;
+    --card-bg: #e9ecef;
+    --border-radius: 10px;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header, .footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 3rem 0;
+}
+
+/* --- Part 1: CSS Transitions and Animations --- */
+
+/* Keyframe Animation for the pulsing box */
+@keyframes heartbeat {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 77, 64, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(0, 77, 64, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 77, 64, 0); }
+}
+
+.heartbeat-box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    margin: 2rem auto;
+    border-radius: var(--border-radius);
+    animation: heartbeat 2s infinite ease-in-out;
+}
+
+/* Button Transition */
+.transition-btn, #calculate-btn, #trigger-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.transition-btn:hover {
+    background-color: #a42c0c;
+    transform: translateY(-2px);
+}
+
+/* --- Part 2: JavaScript Functions --- */
+.form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#length-input, #width-input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    width: 150px;
+}
+
+#calculate-btn:hover {
+    background-color: #a42c0c;
+}
+
+.result-text {
+    margin-top: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* --- Part 3: Combining CSS and JavaScript --- */
+
+/* Keyframe Animation for JS trigger */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.card {
+    display: inline-block;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 100px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.initial-text {
+    font-style: italic;
+    color: #888;
+}
+
+.hidden-text {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+/* This class will be added by JavaScript to trigger the animation */
+.card.animate-reveal .initial-text {
+    display: none;
+}
+
+.card.animate-reveal .hidden-text {
+    opacity: 1;
+    animation: fade-in 1s forwards;
+}
+
+#trigger-btn {
+    margin-top: 1.5rem;
+}
+
+#trigger-btn:hover {
+    background-color: #a42c0c;
+}
